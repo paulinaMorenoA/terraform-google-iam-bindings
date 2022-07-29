@@ -97,9 +97,9 @@ locals {
       "roles/healthcare.fhirStoreViewer",
       "roles/healthcare.datasetViewer",
       "roles/healthcare.dicomStoreViewer",
-      "roles/healthcare.hl7V2StoreViewer"
-#       "roles/container.clusterViewer",
-#       "roles/cloudsupport.techSupportViewer",
+      "roles/healthcare.hl7V2StoreViewer",
+      "roles/container.clusterViewer",
+      "roles/cloudsupport.techSupportViewer",
     ]
     "sandbox" = [
       "roles/editor",
