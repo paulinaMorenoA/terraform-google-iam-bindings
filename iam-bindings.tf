@@ -36,17 +36,7 @@ locals {
       "roles/cloudbuild.builds.builder",
       "roles/aiplatform.admin",
       "roles/iam.workloadIdentityPoolAdmin",
-      "roles/datapipelines.admin",
-      "roles/pubsub.admin",
-      "roles/healthcare.annotationStoreAdmin",
-      "roles/healthcare.consentArtifactAdmin",
-      "roles/healthcare.consentStoreAdmin",
-      "roles/healthcare.fhirStoreAdmin",
-      "roles/healthcare.datasetAdmin",
-      "roles/healthcare.dicomStoreAdmin",
-      "roles/healthcare.hl7V2StoreAdmin",
-      "roles/container.admin",
-      "roles/cloudsupport.techSupportEditor",
+      "roles/datapipelines.admin"
     ]
     "Developer" = [
       "roles/dataflow.developer",
@@ -73,6 +63,16 @@ locals {
       "roles/healthcare.datasetViewer",
       "roles/healthcare.dicomEditor",
       "roles/container.developer",
+      "roles/cloudsupport.techSupportEditor",
+      "roles/pubsub.admin",
+      "roles/healthcare.annotationStoreAdmin",
+      "roles/healthcare.consentArtifactAdmin",
+      "roles/healthcare.consentStoreAdmin",
+      "roles/healthcare.fhirStoreAdmin",
+      "roles/healthcare.datasetAdmin",
+      "roles/healthcare.dicomStoreAdmin",
+      "roles/healthcare.hl7V2StoreAdmin",
+      "roles/container.admin",
       "roles/cloudsupport.techSupportEditor",
     ]
     "Viewer" = [
