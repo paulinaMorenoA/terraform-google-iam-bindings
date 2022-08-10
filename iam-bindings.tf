@@ -73,7 +73,17 @@ locals {
       "roles/healthcare.datasetViewer",
       "roles/healthcare.dicomEditor",
       "roles/container.developer",
-      "roles/cloudsupport.techSupportEditor"
+      "roles/cloudsupport.techSupportEditor",
+      "roles/datapipelines.admin",
+      "roles/pubsub.admin",
+      "roles/healthcare.annotationStoreAdmin",
+      "roles/healthcare.consentArtifactAdmin",
+      "roles/healthcare.consentStoreAdmin",
+      "roles/healthcare.fhirStoreAdmin",
+      "roles/healthcare.datasetAdmin",
+      "roles/healthcare.dicomStoreAdmin",
+      "roles/healthcare.hl7V2StoreAdmin",
+      "roles/container.admin",
     ]
     "Viewer" = [
       "roles/dataflow.viewer",
@@ -100,6 +110,16 @@ locals {
       "roles/healthcare.hl7V2StoreViewer",
       "roles/container.clusterViewer",
       "roles/cloudsupport.techSupportViewer",
+      "roles/editor",
+      "roles/iap.tunnelResourceAccessor",
+      "roles/source.admin",
+      "roles/monitoring.admin",
+      "roles/artifactregistry.admin",
+      "roles/automl.admin",
+      "roles/bigquery.admin",
+      "roles/cloudfunctions.admin",
+      "roles/cloudsql.admin",
+      "roles/dataflow.admin"
     ]
     "sandbox" = [
       "roles/editor",
