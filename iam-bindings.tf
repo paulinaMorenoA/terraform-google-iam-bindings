@@ -48,7 +48,7 @@
       "roles/artifactregistry.writer"
     ]
 
-    "PowerUser" = [
+    "PowerUser_1" = [
       "roles/dataflow.admin",
       "roles/dataproc.admin",
       "roles/composer.admin",
@@ -56,57 +56,34 @@
       "roles/bigquery.dataViewer",
       "roles/logging.viewer",
       "roles/monitoring.viewer",
-
       "roles/cloudscheduler.admin",
-
       "roles/run.admin",
-
       "roles/bigtable.admin",
-
       "roles/cloudbuild.builds.approver",
-
       "roles/aiplatform.admin",
-
       "roles/iam.workloadIdentityPoolAdmin",
 
+    ]
+    "PowerUser_2" = [
       "roles/datapipelines.admin",
-
       "roles/pubsub.admin",
-
       "roles/healthcare.annotationStoreAdmin",
-
       "roles/healthcare.consentArtifactAdmin",
-
       "roles/healthcare.consentStoreAdmin",
-
       "roles/healthcare.fhirStoreAdmin",
-
       "roles/healthcare.datasetAdmin",
-
       "roles/healthcare.dicomStoreAdmin",
-
       "roles/healthcare.hl7V2StoreAdmin",
-
       "roles/container.admin",
-
       "roles/cloudsupport.techSupportEditor",
-
       "roles/iam.securityReviewer",
-
       "roles/artifactregistry.repoAdmin",
-
       "roles/artifactregistry.writer",
-
       "roles/compute.osLogin",
-
       "roles/browser",
-
       "roles/serviceusage.serviceUsageConsumer",
-
       "roles/iap.tunnelResourceAccessor",
-
       "roles/bigquery.jobUser",
-
       "roles/bigquery.readSessionUser"
 
     ]
