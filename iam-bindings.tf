@@ -48,7 +48,7 @@
       "roles/artifactregistry.writer"
     ]
 
-    "PowUser" = [
+    "PowUser_1" = [
       "roles/dataflow.admin",
       "roles/dataproc.admin",
       "roles/composer.admin",
@@ -66,7 +66,9 @@
       "roles/pubsub.admin",
       "roles/healthcare.annotationStoreAdmin",
       "roles/healthcare.consentArtifactAdmin",
-      "roles/healthcare.consentStoreAdmin",
+      "roles/healthcare.consentStoreAdmin"
+    ]
+    "PowUser_2" = [
       "roles/healthcare.fhirStoreAdmin",
       "roles/healthcare.datasetAdmin",
       "roles/healthcare.dicomStoreAdmin",
@@ -82,7 +84,6 @@
       "roles/iap.tunnelResourceAccessor",
       "roles/bigquery.jobUser",
       "roles/bigquery.readSessionUser"
-
     ]
 
     "Developer" = [
