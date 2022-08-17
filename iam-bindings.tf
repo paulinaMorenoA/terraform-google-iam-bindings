@@ -48,7 +48,7 @@
       "roles/artifactregistry.writer"
     ]
 
-    "PowerUser" = [
+    "PowUser" = [
       "roles/dataflow.admin",
       "roles/dataproc.admin",
       "roles/composer.admin",
