@@ -93,8 +93,9 @@
       "roles/dataproc.editor",
 
       "roles/composer.user",
+      "roles/storage.admin",
 
-      "roles/storage.objectViewer",
+#       "roles/storage.objectViewer",
 
       "roles/bigquery.dataViewer",
 
