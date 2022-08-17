@@ -286,8 +286,6 @@
 
       "roles/dataflow.worker",
 
-      "organizations/269666726474/roles/EdpDataprocWorker",
-
       "roles/composer.user",
 
       "roles/bigquery.jobUser",
@@ -308,17 +306,11 @@
 
       "roles/dataflow.worker",
 
-      "organizations/269666726474/roles/EdpDataprocWorker",
-
       "roles/composer.user",
 
       "roles/bigquery.jobUser",
 
       "roles/bigquery.readSessionUser",
-
-      "organizations/269666726474/roles/CvsNotebooksRunner",
-
-      "organizations/269666726474/roles/CvsNotebooksRunnerPlus",
 
       "roles/compute.osLogin",
 
