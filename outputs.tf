@@ -21,3 +21,8 @@ output "project_role_custom_bindings" {
 output "restricted_iam_admin_bindings" {
   value = local.restricted_iam_admin_bindings
 }
+
+output "project_iam_role_bindings" {
+  value = local.project_iam_role_bindings
+}
+   
