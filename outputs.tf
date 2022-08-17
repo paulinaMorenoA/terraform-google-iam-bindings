@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-output "project_role_bindings" {
-  value = local.project_role_bindings
+output "project_role_custom_bindings" {
+  value = local.project_roles_custom_role_bindings
 }
 
 output "restricted_iam_admin_bindings" {
