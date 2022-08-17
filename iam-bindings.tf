@@ -14,132 +14,320 @@
  * limitations under the License.
  */
 
-locals {
+ locals {
+
   project_iam_role_bindings = {
+
     "TenantAdmin" = [
       "roles/iam.serviceAccountAdmin",
       "roles/cloudsupport.techSupportViewer",
+      "roles/iam.securityReviewer",
+      "roles/browser"
     ]
+
+    "ANBCStorageAdmin" = [
+      "roles/storage.admin",
+      "roles/bigquery.dataEditor",
+      "roles/bigquery.jobUser",
+      "roles/artifactregistry.admin"
+    ]
+
+    "ANBCBQUser" = [
+      "roles/bigquery.jobUser",
+      "roles/iam.securityReviewer",
+      "roles/cloudsupport.techSupportEditor",
+      "roles/browser",
+      "roles/bigquery.readSessionUser",
+      "roles/bigquery.dataViewer"
+
+    ]
+
+    "ANBCArtifactUser" = [
+
+      "roles/artifactregistry.repoAdmin",
+      "roles/artifactregistry.writer"
+    ]
+
     "PowerUser" = [
       "roles/dataflow.admin",
       "roles/dataproc.admin",
       "roles/composer.admin",
       "roles/storage.objectViewer",
-      "roles/bigquery.user",
       "roles/bigquery.dataViewer",
       "roles/logging.viewer",
       "roles/monitoring.viewer",
+
       "roles/cloudscheduler.admin",
+
       "roles/run.admin",
+
       "roles/bigtable.admin",
+
       "roles/cloudbuild.builds.approver",
-      "roles/cloudbuild.builds.builder",
+
       "roles/aiplatform.admin",
+
       "roles/iam.workloadIdentityPoolAdmin",
+
       "roles/datapipelines.admin",
+
       "roles/pubsub.admin",
+
       "roles/healthcare.annotationStoreAdmin",
+
       "roles/healthcare.consentArtifactAdmin",
+
       "roles/healthcare.consentStoreAdmin",
+
       "roles/healthcare.fhirStoreAdmin",
+
       "roles/healthcare.datasetAdmin",
+
       "roles/healthcare.dicomStoreAdmin",
+
       "roles/healthcare.hl7V2StoreAdmin",
+
       "roles/container.admin",
+
       "roles/cloudsupport.techSupportEditor",
+
+      "roles/iam.securityReviewer",
+
+      "roles/artifactregistry.repoAdmin",
+
+      "roles/artifactregistry.writer",
+
+      "roles/compute.osLogin",
+
+      "roles/browser",
+
+      "roles/serviceusage.serviceUsageConsumer",
+
+      "roles/iap.tunnelResourceAccessor",
+
+      "roles/bigquery.jobUser",
+
+      "roles/bigquery.readSessionUser"
+
     ]
+
     "Developer" = [
+
       "roles/dataflow.developer",
+
       "roles/dataproc.editor",
+
       "roles/composer.user",
+
       "roles/storage.objectViewer",
-      "roles/bigquery.user",
+
       "roles/bigquery.dataViewer",
+
       "roles/logging.viewer",
+
       "roles/monitoring.viewer",
+
       "roles/cloudscheduler.jobRunner",
+
       "roles/run.developer",
+
       "roles/run.invoker",
+
       "roles/bigtable.user",
+
       "roles/cloudbuild.builds.editor",
+
       "roles/aiplatform.featurestoreDataWriter",
+
       "roles/aiplatform.user",
+
       "roles/iam.workloadIdentityPoolAdmin",
+
       "roles/pubsub.editor",
+
       "roles/healthcare.annotationEditor",
+
       "roles/healthcare.consentArtifactEditor",
+
       "roles/healthcare.consentEditor",
+
       "roles/healthcare.fhirResourceEditor",
+
       "roles/healthcare.datasetViewer",
+
       "roles/healthcare.dicomEditor",
+
       "roles/container.developer",
+
       "roles/cloudsupport.techSupportEditor",
-      "roles/datapipelines.admin",
-      "roles/pubsub.admin",
-      "roles/healthcare.annotationStoreAdmin",
-      "roles/healthcare.consentArtifactAdmin",
-      "roles/healthcare.consentStoreAdmin",
-      "roles/healthcare.fhirStoreAdmin",
-      "roles/healthcare.datasetAdmin",
-      "roles/healthcare.dicomStoreAdmin",
-      "roles/healthcare.hl7V2StoreAdmin",
-      "roles/container.admin",
+
+      "roles/iam.securityReviewer",
+
+      "roles/compute.osLogin",
+
+      "roles/browser",
+
+      "roles/serviceusage.serviceUsageConsumer",
+
+      "roles/iap.tunnelResourceAccessor",
+
+      "roles/bigquery.jobUser",
+
+      "roles/bigquery.readSessionUser",
+
     ]
+
     "Viewer" = [
       "roles/dataflow.viewer",
+
       "roles/dataproc.viewer",
+
       "roles/composer.user",
+
       "roles/storage.objectViewer",
-      "roles/bigquery.user",
+
       "roles/bigquery.dataViewer",
+
       "roles/logging.viewer",
+
       "roles/monitoring.viewer",
+
       "roles/cloudscheduler.viewer",
+
       "roles/run.viewer",
+
       "roles/bigtable.reader",
+
       "roles/cloudbuild.builds.viewer",
+
       "roles/aiplatform.viewer",
+
       "roles/iam.workloadIdentityPoolViewer",
+
       "roles/pubsub.viewer",
+
       "roles/healthcare.annotationReader",
+
       "roles/healthcare.consentArtifactReader",
+
       "roles/healthcare.consentStoreViewer",
+
       "roles/healthcare.fhirStoreViewer",
+
       "roles/healthcare.datasetViewer",
+
       "roles/healthcare.dicomStoreViewer",
+
       "roles/healthcare.hl7V2StoreViewer",
+
       "roles/container.clusterViewer",
+
       "roles/cloudsupport.techSupportViewer",
-      "roles/editor",
-      "roles/iap.tunnelResourceAccessor",
-      "roles/source.admin",
-      "roles/monitoring.admin",
-      "roles/artifactregistry.admin",
-      "roles/automl.admin",
-      "roles/bigquery.admin",
-      "roles/cloudfunctions.admin",
-      "roles/cloudsql.admin",
-      "roles/dataflow.admin"
+
+      "roles/iam.securityReviewer",
+
+      "roles/browser",
+
+      "roles/bigquery.jobUser",
+
+      "roles/bigquery.readSessionUser",
+
     ]
-    "sandbox" = [
-      "roles/editor",
-      "roles/iap.tunnelResourceAccessor",
-      "roles/source.admin",
-      "roles/monitoring.admin",
-      "roles/artifactregistry.admin",
-      "roles/automl.admin",
-      "roles/bigquery.admin",
-      "roles/cloudfunctions.admin",
-      "roles/cloudsql.admin",
-      "roles/dataflow.admin",
-      "roles/container.admin",
-      "roles/notebooks.admin",
-      "roles/iam.serviceAccountUser",
-      "roles/compute.instanceAdmin",
+
+#     "sandbox" = [
+
+#       "roles/viewer",
+
+#       "roles/iap.tunnelResourceAccessor",
+
+#       "roles/source.admin",
+
+#       "roles/monitoring.admin",
+
+#       "roles/artifactregistry.admin",
+
+#       "roles/automl.admin",
+
+#       "roles/bigquery.admin",
+
+#       "roles/cloudfunctions.admin",
+
+#       "roles/cloudsql.admin",
+
+#       "roles/dataflow.admin",
+
+#       "roles/container.admin",
+
+#       "roles/notebooks.admin",
+
+#       "roles/iam.serviceAccountUser",
+
+#       "roles/compute.instanceAdmin",
+
+#       "roles/compute.networkViewer",
+
+#       "roles/compute.loadBalancerAdmin",
+
+#       "roles/iam.serviceAccountAdmin",
+
+#       "roles/compute.osLogin",
+
+#       "roles/composer.user",
+
+#     ]
+
+    "PipelineSA" = [
+
+      "roles/compute.viewer",
+
       "roles/compute.networkViewer",
-      "roles/compute.loadBalancerAdmin",
-      "roles/iam.serviceAccountAdmin",
+
+      "roles/compute.networkUser",
+
+      "roles/dataflow.worker",
+
+      "organizations/269666726474/roles/EdpDataprocWorker",
+
+      "roles/composer.user",
+
+      "roles/bigquery.jobUser",
+
+      "roles/bigquery.readSessionUser",
+
+      "roles/dataproc.editor",
+
     ]
+
+    "EngineeringSA" = [
+
+      "roles/compute.viewer",
+
+      "roles/compute.networkViewer",
+
+      "roles/compute.networkUser",
+
+      "roles/dataflow.worker",
+
+      "organizations/269666726474/roles/EdpDataprocWorker",
+
+      "roles/composer.user",
+
+      "roles/bigquery.jobUser",
+
+      "roles/bigquery.readSessionUser",
+
+      "organizations/269666726474/roles/CvsNotebooksRunner",
+
+      "organizations/269666726474/roles/CvsNotebooksRunnerPlus",
+
+      "roles/compute.osLogin",
+
+      "roles/iap.tunnelResourceAccessor",
+
+      "roles/dataproc.editor",
+
+    ]
+
   }
 
   project_group_to_crole_transpose = transpose(var.users_roles_needed == null ? {} : var.users_roles_needed)
