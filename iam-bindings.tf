@@ -48,7 +48,7 @@
       "roles/artifactregistry.writer"
     ]
 
-    "PowerUser_1" = [
+    "PowerUser" = [
       "roles/dataflow.admin",
       "roles/dataproc.admin",
       "roles/composer.admin",
@@ -62,9 +62,6 @@
       "roles/cloudbuild.builds.approver",
       "roles/aiplatform.admin",
       "roles/iam.workloadIdentityPoolAdmin",
-
-    ]
-    "PowerUser_2" = [
       "roles/datapipelines.admin",
       "roles/pubsub.admin",
       "roles/healthcare.annotationStoreAdmin",
