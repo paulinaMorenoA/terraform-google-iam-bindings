@@ -299,8 +299,8 @@
 
   project_group_to_crole_transpose = transpose(var.users_roles_needed == null ? {} : var.users_roles_needed)
   
-  project_roles_custom_role_bindings = {for principal, job_functions in local.project_group_to_crole_transpose :
-    format("roles/%s",principal) => toset([for job_function in job_functions: format("roles/%s",job_function)])
+  project_roles_custom_role_bindings = {for job_function, principals in local.project_group_to_crole_transpose :
+    format("roles/%s",job_function) => toset([for principal in principals: principal])
   }
 
   restricted_iam_admin_expression = "api.getAttribute('iam.googleapis.com/modifiedGrantsByRole', []).hasOnly(['roles/dataflow.worker']) || api.getAttribute('iam.googleapis.com/modifiedGrantsByRole', []).hasOnly(['roles/composer.worker', 'roles/bigquery.jobUser', 'roles/logging.admin'])"
