@@ -25,3 +25,8 @@ variable "restricted_iam_admin_users" {
   type        = list(string)
   default     = []
 }
+
+variable "org_id" {
+  description = "The organization id for the associated services"
+  type        = string
+}
